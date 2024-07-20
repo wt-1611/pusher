@@ -30,9 +30,13 @@ jobs:
         if [ ! -z $line ]
 
             eval $(echo $line | awk -F':' '{print "IMAGE="$1,"TAG="$2}')
+            echo "download image:$line"
+              docker pull $line
               imageid=$(docker image ls |grep "${IMAGE}" |grep "${TAG}" | awk '{print $3}')
               dest="${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}"
+            echo "tag: $imageid to $dest"
               docker tag $imageid $dest
+            echo "push: $dest"
               docker push $dest  && echo "push successful" 
            
 
