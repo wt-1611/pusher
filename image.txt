@@ -1,1 +1,1 @@
-calico/cni:v3.26.4
+calico/kube-controllers:v3.26.4
