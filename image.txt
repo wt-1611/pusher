@@ -1,2 +1,6 @@
 nginx:latest
+<<<<<<< HEAD
 kubernetes:v1.30.1
+=======
+kubernetes:v1.30.1
+>>>>>>> d718dc58ced6e419237f125e1bef1642cf191bbd
