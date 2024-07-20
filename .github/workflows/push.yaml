@@ -25,7 +25,7 @@ jobs:
         echo "==============begin"
         while  read -r line; do
         echo "in while"
-          if [ ! -z $line ];then
+
 
             awk -F':' '{print $1,$2}'| while  read  IMAGE TAG;do
              echo "push to ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}"
@@ -33,9 +33,7 @@ jobs:
               docker push ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}  && echo "push successful" || echo "push failure"
             done
 
-          else
-             echo "There is no image to push"
-          fi
+
 
         done < image.txt 
 
