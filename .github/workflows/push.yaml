@@ -28,12 +28,13 @@ jobs:
         echo "in while"
 
         if [ ! -z $line ]
-            echo $line | awk -F':' '{print $1,$2}'  | while  read  IMAGE TAG;do
+
+            eval $(echo $line | awk -F':' '{print "IMAGE="$1,"TAG="$2}')
               imageid=$(docker image ls |grep "${IMAGE}" |grep "${TAG}" | awk '{print $3}')
               dest="${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}"
               docker tag $imageid $dest
               docker push $dest  && echo "push successful" 
-            done
+           
 
         done < image.txt 
 
