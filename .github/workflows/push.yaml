@@ -14,6 +14,7 @@ jobs:
   steps:
   - name: Read warehouse configuration
     user: actions/checkout@v4
+    
   - name: pull and push
     run: |
       docker login -u $USER -p $PASS $REGISTRY
