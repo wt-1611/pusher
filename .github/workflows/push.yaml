@@ -29,7 +29,7 @@ jobs:
 
         docker images
 
-        cat image.txt | while read line; do
+        for line in $(cat image.txt); do
           echo $line
             if [ ! -z $line ];then
                 eval $(echo $line | awk -F':' '{print "IMAGE="$1,"TAG="$2}')
