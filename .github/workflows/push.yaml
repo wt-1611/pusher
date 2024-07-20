@@ -26,14 +26,12 @@ jobs:
         while  read -r line; do
         echo "in while"
 
-
-            awk -F':' '{print $1,$2}'| while  read  IMAGE TAG;do
+        
+            awk -F':' '{print $1,$2}' line | while  read  IMAGE TAG;do
              echo "push to ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}"
               docker tag $line ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}
               docker push ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}  && echo "push successful" || echo "push failure"
             done
-
-
 
         done < image.txt 
 
