@@ -15,7 +15,8 @@ jobs:
     steps:
     - name: Read warehouse configuration
       uses: actions/checkout@v4
-
+    - name: Docker Setup Buildx
+      uses: docker/setup-buildx-action@v3
     - name: pull and push
       run: |
         docker login -u $USER -p $PASS $REGISTRY
