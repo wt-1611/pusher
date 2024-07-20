@@ -1,1 +1,1 @@
-easzlab/k8s-dns-node-cache:1.22.28
+easzlab/metrics-server:v0.7.1
