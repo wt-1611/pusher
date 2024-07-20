@@ -1,1 +1,1 @@
-calico/node:v3.26.4
+easzlab/k8s-dns-node-cache:1.22.28
