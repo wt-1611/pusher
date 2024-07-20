@@ -26,11 +26,13 @@ jobs:
 
         echo "need image list:"
           cat image.txt
-          while read  line; do
+
+        docker images
+
+          cat image.txt | while read line; do
             if [ ! -z $line ];then
                 eval $(echo $line | awk -F':' '{print "IMAGE="$1,"TAG="$2}')
-                docker images
-
+  
                 echo "download image:$line"
                   docker pull $line
                   imageid=$(docker image ls |grep "${IMAGE}" |grep "${TAG}" | awk '{print $3}')
@@ -40,7 +42,7 @@ jobs:
                   docker tag $imageid $dest
 
                 echo "push: $dest"
-                  docker push $dest  && echo "push successful" 
+                  docker push $dest  && echo "push successful to $dest" 
             fi
-          done < image.txt 
+          done
         
