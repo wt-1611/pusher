@@ -1,0 +1,27 @@
+on: push
+
+
+env:
+  USER: "${{ secrets.ALIYUNUSER }}"
+  PASS: "${{ secrets.ALIYUNPASS}}"
+  REGISTRY: "${{ secrets.ALIYUNREGISTRY }}"
+  NAMESPACE: "${{ secrets.ALIYUNNAMESPACE }}"
+
+jobs:
+  pushtodocker:
+    name: push to docker
+    runs-on: ubuntu-latest
+  steps:
+  - name: Read warehouse configuration
+    user: actions/checkout@v4
+  - name: pull and push
+    run: |
+      docker login -u $USER -p $PASS $REGISTRY
+      while read line;do
+        if [ ! -z $line ];then
+          awk -F':' '{print $1,$2}'| while read IMAGE TAG;do
+            docker tag $line ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}
+            docker push ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}
+          done
+        fi
+      done < image.txt 
