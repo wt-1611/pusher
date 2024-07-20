@@ -1,1 +1,2 @@
 nginx:latest
+kubernetes:v1.30.1
