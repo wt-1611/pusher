@@ -32,4 +32,7 @@ jobs:
              echo "There is no image to push"
           fi
         done < image.txt 
+
+        cat image.txt
+
         echo "==============end"
