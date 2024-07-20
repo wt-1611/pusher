@@ -12,18 +12,18 @@ jobs:
   pushtodocker:
     name: push
     runs-on: ubuntu-latest
-  steps:
-  - name: Read warehouse configuration
-    uses: actions/checkout@v4
+    steps:
+    - name: Read warehouse configuration
+      uses: actions/checkout@v4
 
-  - name: pull and push
-    run: |
-      docker login -u $USER -p $PASS $REGISTRY
-      while read line;do
-        if [ ! -z $line ];then
-          awk -F':' '{print $1,$2}'| while read IMAGE TAG;do
-            docker tag $line ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}
-            docker push ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}
-          done
-        fi
-      done < image.txt 
+    - name: pull and push
+      run: |
+        docker login -u $USER -p $PASS $REGISTRY
+        while read line;do
+          if [ ! -z $line ];then
+            awk -F':' '{print $1,$2}'| while read IMAGE TAG;do
+              docker tag $line ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}
+              docker push ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}
+            done
+          fi
+        done < image.txt 
