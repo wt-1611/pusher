@@ -20,10 +20,10 @@ jobs:
     - name: pull and push
       run: |
         docker login -u $USER -p $PASS $REGISTRY
-        echo "ok"
-        while read line;do
+        echo "==============begin"
+        while IFS= read -r line; do
           if [ ! -z $line ];then
-            awk -F':' '{print $1,$2}'| while read IMAGE TAG;do
+            awk -F':' '{print $1,$2}'| while IFS= read -r IMAGE TAG;do
              echo "push to ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}"
               docker tag $line ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}
               docker push ${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}  && echo "push successful" || echo "push failure"
@@ -32,3 +32,4 @@ jobs:
              echo "There is no image to push"
           fi
         done < image.txt 
+        echo "==============end"
