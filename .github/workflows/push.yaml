@@ -21,27 +21,26 @@ jobs:
 
     - name: pull and push
       run: |
+      
+      docker login -u $USER -p $PASS $REGISTRY
+
+      echo "need image list:"
         cat image.txt
-        docker login -u $USER -p $PASS $REGISTRY
-        echo "==============begin"
-        while  read -r line; do
-          echo "in while"
-
+        while read  line; do
           if [ ! -z $line ];then
-
               eval $(echo $line | awk -F':' '{print "IMAGE="$1,"TAG="$2}')
+              docker images
+
               echo "download image:$line"
                 docker pull $line
                 imageid=$(docker image ls |grep "${IMAGE}" |grep "${TAG}" | awk '{print $3}')
                 dest="${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}"
-                docker images 
+                 
               echo "tag: $imageid to $dest"
                 docker tag $imageid $dest
+
               echo "push: $dest"
-                docker login -u $USER -p $PASS $REGISTRY
                 docker push $dest  && echo "push successful" 
           fi
         done < image.txt 
         
-
-        echo "==============end"
