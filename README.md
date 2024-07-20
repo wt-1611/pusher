@@ -9,3 +9,6 @@ ALIYUNNAMESPACE：私库项目名
 
 - eg
 docker push $ALIYUNREGISTRY/$ALIYUNNAMESPACE/<imagename>:<imagetag>
+
+
+将需要同步的镜像放置在image.txt文件中，即可出发自动同步。
