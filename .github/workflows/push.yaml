@@ -34,9 +34,11 @@ jobs:
                 docker pull $line
                 imageid=$(docker image ls |grep "${IMAGE}" |grep "${TAG}" | awk '{print $3}')
                 dest="${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}"
+                docker images 
               echo "tag: $imageid to $dest"
                 docker tag $imageid $dest
               echo "push: $dest"
+                docker login -u $USER -p $PASS $REGISTRY
                 docker push $dest  && echo "push successful" 
           fi
         done < image.txt 
