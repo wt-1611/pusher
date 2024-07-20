@@ -25,11 +25,12 @@ jobs:
         docker login -u $USER -p $PASS $REGISTRY
 
         echo "need image list:"
-          cat image.txt
+          cat image.txt && echo
 
         docker images
 
-          cat image.txt | while read line; do
+        cat image.txt | while read line; do
+          echo $line
             if [ ! -z $line ];then
                 eval $(echo $line | awk -F':' '{print "IMAGE="$1,"TAG="$2}')
   
@@ -44,5 +45,5 @@ jobs:
                 echo "push: $dest"
                   docker push $dest  && echo "push successful to $dest" 
             fi
-          done
+        done
         
