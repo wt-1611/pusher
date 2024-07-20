@@ -20,6 +20,7 @@ jobs:
     - name: pull and push
       run: |
         docker login -u $USER -p $PASS $REGISTRY
+        echo "ok"
         while read line;do
           if [ ! -z $line ];then
             awk -F':' '{print $1,$2}'| while read IMAGE TAG;do
