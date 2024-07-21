@@ -1,2 +1,1 @@
-registry:2
-easzlab/kubeasz:3.6.1
+easzlab/kubeasz-sys-pkg:1.0.0_ubuntu_20
