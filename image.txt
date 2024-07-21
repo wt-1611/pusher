@@ -1,17 +1,3 @@
-easzlab/harbor-offline:v2.6.4
-calico/cni:v3.24.6
-calico/kube-controllers:v3.24.6
-calico/node:v3.24.6
-coredns/coredns:1.9.3
-easzlab/k8s-dns-node-cache:1.22.20
-kubernetesui/dashboard:v2.7.0
-kubernetesui/metrics-scraper:v1.0.8
-easzlab/metrics-server:v0.6.3
-easzlab/pause:3.9
-cilium/cilium:v1.13.2
-cilium/operator-generic:v1.13.2
-cilium/hubble-relay:v1.13.2
-cilium/hubble-ui-backend:v0.11.0
 cilium/hubble-ui:v0.11.0
 flannel/flannel:v0.21.4
 flannel/flannel-cni-plugin:v1.1.2
