@@ -1,2 +1,1 @@
-envoyproxy/envoy:v1.29.2
-ikubernetes/demoapp:v1.0
+ikubernetes/admin-box:v1.2
