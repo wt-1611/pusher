@@ -1,1 +1,8 @@
-ikubernetes/admin-box:v1.2
+registry.k8s.io/sig-storage/csi-provisioner:v3.5.0
+registry.k8s.io/sig-storage/csi-snapshotter:v6.2.2
+registry.k8s.io/sig-storage/livenessprobe:v2.10.0
+registry.k8s.io/sig-storage/nfsplugin:v4.3.0
+registry.k8s.io/sig-storage/livenessprobe:v2.10.0
+registry.k8s.io/sig-storage/csi-node-driver-registrar:v2.8.0
+registry.k8s.io/sig-storage/nfsplugin:v4.3.0
+registry.k8s.io/sig-storage/snapshot-controller:v6.2.2
