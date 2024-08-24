@@ -1,1 +1,1 @@
-ikubernetes/demoapp:v1.1
+ikubernetes/servicemesh-app:latest
