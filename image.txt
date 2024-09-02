@@ -1,1 +1,2 @@
-nginx:1.23.0
+quay.io/metallb/speaker:v0.14.8
+quay.io/metallb/controller:v0.14.8
