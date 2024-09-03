@@ -32,8 +32,12 @@ jobs:
         for line in $(cat image.txt); do
           echo $line
             if [ ! -z $line ];then
+                echo $line |grep '@sha' &>/dev/null
+                if [ $? -ne 0 ];then
                 eval $(echo $line | awk -F'/' '{print $NF}'|awk -F':' '{print "IMAGE="$1,"TAG="$2}')
-  
+                else
+                eval $(echo $line | awk -F'/' '{print $NF}'|awk -F':' '{print "IMAGE="$1,"TAG="$2:$3}')
+                fi
                 echo "download image:$line"
                   docker pull $line
                   imageid=$(docker image ls |grep "${IMAGE}" |grep "${TAG}" | awk '{print $3}')
