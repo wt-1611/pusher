@@ -36,7 +36,7 @@ jobs:
                 if [ $? -ne 0 ];then
                 eval $(echo $line | awk -F'/' '{print $NF}'|awk -F':' '{print "IMAGE="$1,"TAG="$2}')
                 else
-                eval $(echo $line | awk -F'/' '{print $NF}'|awk -F'@' '{print $1}' | awk -F ':' '{print "IMAGE="$1,"TAG="$2}')
+                eval $(echo $line | awk -F'/' '{print $NF}'|awk -F'@' '{print $1}' | awk -F ':' '{print "IMAGE="$1,"TAG="$1}')
                 fi
                 echo "download image:$line"
                   docker pull $line
@@ -46,11 +46,7 @@ jobs:
                   echo "################################"
                   echo
                   imageid=$(docker image ls |grep "${IMAGE}" |grep "${TAG}" | awk '{print $3}')
-                  echo
-                  echo "################################"
-                  docker image ls
-                  echo "################################"
-                  echo
+    
                   dest="${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}"
                   
                 echo "tag: $imageid to $dest"
