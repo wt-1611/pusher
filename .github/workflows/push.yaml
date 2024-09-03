@@ -46,7 +46,12 @@ jobs:
                   echo "################################"
                   echo
                   imageid=$(docker image ls |grep "${IMAGE}" |grep "${TAG}" | awk '{print $3}')
+                  echo
+                  echo "################################"
+                  docker image ls |grep "${IMAGE}" |grep "${TAG}"
                   echo $imageid
+                  echo "################################"
+                  echo
                   dest="${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}"
                   
                 echo "tag: $imageid to $dest"
