@@ -40,7 +40,11 @@ jobs:
                 fi
                 echo "download image:$line"
                   docker pull $line
+                  echo
+                  echo "################################"
                   echo "$IMAGE-$TAG"
+                  echo "################################"
+                  echo
                   imageid=$(docker image ls |grep "${IMAGE}" |grep "${TAG}" | awk '{print $3}')
                   echo $imageid
                   dest="${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}"
