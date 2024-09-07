@@ -1,1 +1,4 @@
-gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard:v0.50.0@sha256:7f1591f311efab1bda7b1c7ce2a84aecb4a4792a15570683c5f3d09868a94f67
+registry.k8s.io/sig-storage/csi-provisioner:v5.0.2
+registry.k8s.io/sig-storage/csi-snapshotter:v8.0.1
+registry.k8s.io/sig-storage/livenessprobe:v2.13.1
+registry.k8s.io/sig-storage/nfsplugin:v4.9.0
