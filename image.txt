@@ -1,3 +1,4 @@
 ghcr.io/dexidp/dex:v2.38.0
 quay.io/argoproj/argocd:v2.12.3
 redis:7.0.15-alpine
+nginx:latest
