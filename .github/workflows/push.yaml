@@ -38,11 +38,11 @@ jobs:
             
                 echo $line |grep '@sha' &>/dev/null
                 if [ $? -ne 0 ];then
-                eval $(echo $line | awk -F'/' '{print $NF}'|awk -F':' '{print "IMAGE="$1,"TAG="$2}')
-                imageid=$(docker image ls |grep "${IMAGE}" |grep "${TAG}" | awk '{print $3}')
+                  eval $(echo $line | awk -F'/' '{print $NF}'|awk -F':' '{print "IMAGE="$1,"TAG="$2}')
+                  imageid=$(docker image ls |grep "${IMAGE}" |grep "${TAG}" | awk '{print $3}')
                 else
-                eval $(echo $line | awk -F'/' '{print $NF}'|awk -F'@' '{print $1}' | awk -F ':' '{print "IMAGE="$1,"TAG="$2}')
-                imageid=$(docker image ls |grep "${IMAGE}"  | awk '{print $3}')
+                  eval $(echo $line | awk -F'/' '{print $NF}'|awk -F'@' '{print $1}' | awk -F ':' '{print "IMAGE="$1,"TAG="$2}')
+                  imageid=$(docker image ls |grep "${IMAGE}"  | awk '{print $3}')
                 fi
 
                   echo
