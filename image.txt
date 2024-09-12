@@ -1,7 +1,6 @@
 easzlab/kubeasz:3.6.2
 easzlab/kubeasz-k8s-bin:v1.28.1
 easzlab/kubeasz-ext-bin:1.8.0
-easzlab/kubeasz-sys-pkg:1.0.0
 easzlab/harbor-offline:v2.6.4
 calico/cni:v3.24.6
 calico/kube-controllers:v3.24.6
