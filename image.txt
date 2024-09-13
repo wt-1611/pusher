@@ -1,1 +1,1 @@
-itsthenetwork/nfs-server-alpine:latest
+gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/eventlistenersink:v0.29.1
