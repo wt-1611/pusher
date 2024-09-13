@@ -1,1 +1,1 @@
-registry.k8s.io/etcd:3.5.15-0
+itsthenetwork/nfs-server-alpine:latest
