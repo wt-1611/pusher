@@ -1,1 +1,1 @@
-ikubernetes/admin-box:v1.2
+docker.io/library/redis:7.0.15-alpine
