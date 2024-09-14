@@ -1,1 +1,1 @@
-gcr.io/tekton-releases/github.com/tektoncd/triggers/cmd/eventlistenersink:v0.29.1
+eclipse-temurin:11-jdk
