@@ -1,2 +1,1 @@
-docker.io/library/alpine:3.20
-docker.io/bitnami/kubectl:latest
+ikubernetes/admin-box:v1.2
