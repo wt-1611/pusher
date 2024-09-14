@@ -1,1 +1,1 @@
-eclipse-temurin:11-jdk
+docker.io/library/eclipse-temurin:11-jdk
