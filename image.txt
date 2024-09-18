@@ -1,1 +1,2 @@
-docker.io/library/maven:3.8.7-eclipse-temurin-11-alpine
+docker.io/library/sonarqube:lts-community
+docker.io/library/postgresql
