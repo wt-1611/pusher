@@ -1,2 +1,2 @@
 docker.io/library/sonarqube:lts-community
-docker.io/library/postgresql:latest
+docker.io/library/postgres:latest
