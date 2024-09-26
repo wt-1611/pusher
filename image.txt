@@ -1,5 +1,1 @@
-docker.io/prom/prometheus:latest
-docker.io/prom/node-exporter:latest
-docker.io/grafana/grafana:latest
-docker.io/prom/alertmanager:latest
-registry.k8s.io/kube-state-metrics/kube-state-metrics:v2.11.0
+docker.io/library/elasticssearch:7.12.0
