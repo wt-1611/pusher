@@ -1,1 +1,1 @@
-registry.k8s.io/ingress-nginx/e2e-test-echo:latest
+ingressnginx/e2e-test-echo:v1.0.0
