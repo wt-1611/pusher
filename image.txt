@@ -1,2 +1,1 @@
-docker.io/library/nginx:1.17.0
-docker.io/library/nginx:1.27.0
+registry.k8s.io/ingress-nginx/e2e-test-echo:latest
