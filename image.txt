@@ -1,1 +1,1 @@
-docker.io/library/kinbana:7.12.0
+docker.io/library/kibana:7.12.0
