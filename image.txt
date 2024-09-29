@@ -1,7 +1,1 @@
-docker.io/library/elasticsearch:7.17.24
-docker.io/library/kibana:7.17.24
-docker.io/elastic/filebeat:7.17.24
-docker.io/fluent/fluentd:v1.17-debian-armhf-1
-docker.io/fluent/fluent-bit:latest-debug
-docker.io/fluent/fluentd-kubernetes-daemonset:v1.16-debian-kafka-2
-docker.io/fluent/fluentd-kubernetes-daemonset:v1.17-debian-elasticsearch7-amd64-1
+docker.elastic.co/elasticsearch/elasticsearch:7.17.3
