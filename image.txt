@@ -1,1 +1,1 @@
-docker.elastic.co/kibana/kibana:7.17.3
+docker.io/bitnami/fluentd:1.17.1-debian-12-r2
