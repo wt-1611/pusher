@@ -1,1 +1,1 @@
-docker.io/library/python2:latest
+docker.io/library/python:2.7
