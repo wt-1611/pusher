@@ -1,1 +1,1 @@
-docker.io/library/python:2.7
+docker.io/jaegertracing/all-in-one:1.63.0
