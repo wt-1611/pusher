@@ -1,3 +1,2 @@
-docker.io/bitnami/kafka:3.2.0-debian-10-r4
-docker.io/bitnami/kafka-exporter:1.4.2-debian-10-r243
-docker.io/bitnami/jmx-exporter:0.16.1-debian-10-r306
+docker.io/bitnami/kafka:3.5.1-debian-11-r25
+
