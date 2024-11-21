@@ -1,2 +1,1 @@
-docker.io/bitnami/kafka:3.5.1-debian-11-r25
-
+docker.io/bitnami/zookeeper:3.9.0-debian-11-r1
