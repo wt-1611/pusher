@@ -1,1 +1,1 @@
-docker.io/bitnami/zookeeper:3.9.0-debian-11-r1
+docker.io/fluent/fluentd-kubernetes-daemonset:v1.17-debian-kafka2-1
