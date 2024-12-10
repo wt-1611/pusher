@@ -1,1 +1,1 @@
-docker.io/kubesphere/kubectl:v1.27.16
+quay.io/external_storage/nfs-client-provisioner
