@@ -1,2 +1,1 @@
-quay.io/external_storage/nfs-client-provisioner:v3.1.0-k8s1.11
-docker.io/library/nginx:latest
+docker.io/bitnami/kafka/3.5.0-debian-11-r0
