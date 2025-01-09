@@ -1,1 +1,1 @@
-consdata/kouncil:latest
+provectuslabs/kafka-ui:latest
