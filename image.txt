@@ -1,1 +1,1 @@
-cr.fluentbit.io/fluent/fluent-bit:latest
+radarbase/kafka-manager:latest
