@@ -1,1 +1,1 @@
-sonatype/nexus3:3.54.1:latest
+docker.io/sonatype/nexus3:3.54.1:latest
