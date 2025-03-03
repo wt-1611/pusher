@@ -43,7 +43,7 @@ jobs:
               imageid=$(docker image ls |egrep ".*\/${IMAGE} +" |grep "${TAG}" | awk '{print $3}')
               
               echo "================================================="
-              docker images | egrep ".*\/${IMAGE} +" |grep "${TAG}"  
+              docker images | egrep ".*${IMAGE}[ ]+"
               echo "================================================="
               
               echo
