@@ -54,8 +54,10 @@ jobs:
     
                   dest="${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}"
                   
-                echo "tag: $imageid to $dest"
+                #echo "tag: $imageid to $dest"
+                echo "---------------------------------------"
                 echo "docker tag $imageid $dest"
+                echo "---------------------------------------"
                   docker tag $imageid $dest
 
                 echo "push: $dest"
