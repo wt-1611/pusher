@@ -38,7 +38,7 @@ jobs:
               eval $(echo $line | awk -F'/' '{print $NF}'|awk -F':' '{print "IMAGE="$1,"TAG="$2}')
               imageid=$(docker image ls |grep "${IMAGE}" |grep "${TAG}" | awk '{print $3}')
 
-              echo $line
+              #echo $line
 
               echo
               echo "################################"
@@ -49,7 +49,7 @@ jobs:
     
               dest="${REGISTRY}/${NAMESPACE}/${IMAGE}:${TAG}"
                   
-
+              echo $imageid
               echo "---------------------------------------"
               echo "docker tag $imageid $dest"
               echo "---------------------------------------"
