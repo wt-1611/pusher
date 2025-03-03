@@ -33,13 +33,19 @@ jobs:
           echo $line
             if [ ! -z $line ];then
               echo "download image:$line"
+              
+              echo "开始下载镜像"
               docker pull $line
+              echo "下载完成"
+
               
               eval $(echo $line | awk -F'/' '{print $NF}'|awk -F':' '{print "IMAGE="$1,"TAG="$2}')
               imageid=$(docker image ls |egrep ".*\/${IMAGE} +" |grep "${TAG}" | awk '{print $3}')
-              echo "================================================="
-              docker images | egrep ".*\/${IMAGE} +" |grep "${TAG}"  
-              echo "================================================="
+              
+              #echo "================================================="
+              #docker images | egrep ".*\/${IMAGE} +" |grep "${TAG}"  
+              #echo "================================================="
+              
               echo
               echo "################################"
               echo "$IMAGE-$TAG"
