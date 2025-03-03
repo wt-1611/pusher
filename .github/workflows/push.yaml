@@ -41,9 +41,10 @@ jobs:
               
               eval $(echo $line | awk -F'/' '{print $NF}'|awk -F':' '{print "IMAGE="$1,"TAG="$2}')
               imageid=$(docker image ls |egrep ".*\/${IMAGE} +" |grep "${TAG}" | awk '{print $3}')
-              
+
+              echo "${TAG}"
               echo "================================================="
-              docker images | egrep ".*${IMAGE}[ ]+"
+              docker images | egrep ".*${IMAGE}[ ]+" |grep "${TAG}"
               echo "================================================="
               
               echo
