@@ -1,1 +1,1 @@
-minio/minio:latest
+minio/mc:latest
