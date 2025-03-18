@@ -1,2 +1,1 @@
-velero/velero-plugin-for-aws:v1.7.0
-velero/velero:v1.11.1
+docker.io/kubesphere/kube-rbac-proxy:v0.11.0
