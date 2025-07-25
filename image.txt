@@ -1,1 +1,1 @@
-fluent/fluent-bit:4.0.5-amd64
+fluent/fluentd-kubernetes-daemonset:v1.18.0-debian-kafka2-1.5
