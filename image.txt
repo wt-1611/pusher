@@ -1,1 +1,1 @@
-obsidiandynamics/kafdrop:latest
+fluent/fluent-bit:4.0.5-amd64
