@@ -1,1 +1,1 @@
-opensearchproject/opensearch-dashboards:2.18.0
+cr.fluentbit.io/fluent/fluent-bit:4.0.7
