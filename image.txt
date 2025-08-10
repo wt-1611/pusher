@@ -1,1 +1,1 @@
-opensearchproject/opensearch:2.18.0
+opensearchproject/opensearch-dashboards:latest
