@@ -1,1 +1,3 @@
-cr.fluentbit.io/fluent/fluent-bit:4.0.7
+ghcr.io/dexidp/dex:v2.43.0
+public.ecr.aws/docker/library/redis:7.2.7-alpine
+quay.io/argoproj/argocd:latest
