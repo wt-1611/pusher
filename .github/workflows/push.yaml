@@ -5,8 +5,8 @@ on: push
 env:
   USER: "${{ secrets.ALIYUNUSER }}"
   PASS: "${{ secrets.ALIYUNPASS}}"
-  REGISTRY: "${{ secrets.ALIYUNREGISTRY }}"
-  NAMESPACE: "${{ secrets.ALIYUNNAMESPACE }}"
+  REGISTRY: "registry.cn-hangzhou.aliyuncs.com"
+  NAMESPACE: "wtpublic"
 
 jobs:
   pushtodocker:
@@ -38,7 +38,7 @@ jobs:
               echo "############modify the image tag############"
               docker tag $line $DEST && echo "modify success" || exit 12
 
-              echo "############push images to aliyun############"
+              echo "############push images ${DEST} to aliyun############"
               docker push $DEST && echo "push success" || exit 12
             fi
         done
