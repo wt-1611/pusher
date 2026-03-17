@@ -1,1 +1,1 @@
-gcr.io/heptio-images/ks-guestbook-demo:0.2
+gcr.io/google-samples/gb-frontend:v5
