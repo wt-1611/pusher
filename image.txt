@@ -1,1 +1,1 @@
-kindest/node:v1.29.2
+docker.io/liangjw/kube-webhook-certgen:v1.1.1
