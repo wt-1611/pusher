@@ -1,1 +1,1 @@
-elasticsearch:7.17.3
+easzlab/pause:3.9
